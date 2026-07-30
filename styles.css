@@ -1,41 +1,40 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  min-height: 100%;
-  background: #001225;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #04172d;
 }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #ffffff;
+    overflow-x: hidden;
 }
 
 .render-page {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background: #001225;
-  overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #04172d;
 }
 
 .master-render {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 1920px;
+    display: block;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
 }
 
-/* Keeps the render filling the browser on wider screens */
-@media (min-aspect-ratio: 1920 / 1250) {
-  .master-render {
-    width: auto;
-    height: 100vh;
-    max-width: none;
-  }
+@media (min-aspect-ratio: 16/10) {
+    .master-render {
+        width: auto;
+        height: 100vh;
+        max-width: none;
+    }
 }
