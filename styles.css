@@ -31,9 +31,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+a {
+  color: inherit;
 }
 
 /* Header */
@@ -50,9 +49,40 @@ img {
   padding: 0 82px;
 }
 
-.header-logo img {
-  width: 190px;
-  height: auto;
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--gold-light);
+}
+
+.brand-icon {
+  color: var(--gold);
+  font-size: 28px;
+  line-height: 0.8;
+  text-align: center;
+  width: 38px;
+  margin-top: -2px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-main {
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.brand-sub {
+  margin-top: 7px;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: 700;
 }
 
 .main-nav {
@@ -74,7 +104,7 @@ img {
   color: var(--gold-light);
 }
 
-.contact-link {
+.nav-contact {
   border: 1px solid var(--gold);
   color: var(--gold-light) !important;
   padding: 12px 24px;
@@ -83,69 +113,109 @@ img {
 /* Hero */
 
 .hero {
-  position: relat*ve;
+  position: relative;
   min-height: 720px;
-  height:*72vh;
+  height: 72vh;
   display: flex;
-  align-ite*s: center;
-  justify-content: cent*r;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 
-  backgr*und-image:
+  background-image:
     linear-gradient(
-  *   rgba(2, 15, 32, 0.35),
-      rg*a(2, 15, 32, 0.70)
+      rgba(2, 15, 32, 0.35),
+      rgba(2, 15, 32, 0.70)
     ),
-    url(*london-hero.svg");
+    url("reference-original-render.png");
 
-  background-s*ze: cover;
-  background-position: *enter;
-  background-repeat: no-rep*at;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
-  position:*absolute;
+  position: absolute;
   inset: 0;
-  background*
-    radial-gradient(circle at 68%*42%, rgba(190, 120, 38, 0.24), tra*sparent 30%),
-    linear-gradient(*o bottom, rgba(2, 10, 22, 0.15), r*ba(2, 10, 22, 0.72));
-  pointer-ev*nts: none;
+  background:
+    radial-gradient(circle at 67% 43%, rgba(190, 120, 38, 0.24), transparent 30%),
+    linear-gradient(to bottom, rgba(2, 10, 22, 0.35), rgba(2, 10, 22, 0.84));
+  pointer-events: none;
 }
 
 .hero-content {
-  po*ition: relative;
+  position: relative;
   z-index: 2;
-  w*dth: min(900px, 90%);
-  margin-top* 70px;
+  width: min(900px, 90%);
+  margin-top: 70px;
 }
 
-.hero-logo {
-  width: 46*px;
-  height: auto;
-  margin: 0 au*o 30px auto;
+.hero-mark {
+  margin-bottom: 14px;
+}
+
+.hero-symbol {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 86px;
+  line-height: 0.72;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.hero-logo-text {
+  margin-bottom: 30px;
+}
+
+.hero-name {
+  color: var(--gold-light);
+  font-size: 74px;
+  line-height: 0.95;
+  letter-spacing: 7px;
+  font-weight: 700;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.75);
+}
+
+.hero-subtitle {
+  margin-top: 14px;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 23px;
+  letter-spacing: 12px;
+  font-weight: 700;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.75);
+}
+
+.hero-subtitle span {
+  width: 92px;
+  height: 1px;
+  background: var(--gold);
+  display: inline-block;
 }
 
 .hero h1 {
-  margi*: 0 0 20px 0;
-  color: var(--white*;
+  margin: 0 0 20px 0;
+  color: var(--white);
   font-size: 50px;
-  line-height* 1.12;
+  line-height: 1.12;
   font-weight: 400;
-  lette*-spacing: 0.2px;
-  text-shadow: 0 *px 12px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.2px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
 }
 
-.he*o p {
-  max-width: 650px;
-  margin* 0 auto 34px auto;
-  color: rgba(2*5, 255, 255, 0.92);
-  font-size: 1*px;
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 34px auto;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
   line-height: 1.55;
-  font-we*ght: 700;
-  text-shadow: 0 2px 12p* rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
 }
 
-.hero-but*ons {
+.hero-buttons {
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -176,43 +246,44 @@ img {
 /* Principles */
 
 .principles-section {
-  backgro*nd: var(--navy-light);
-  border-to*: 1px solid rgba(200, 155, 74, 0.5*;
-  border-bottom: 1px solid rgba(*00, 155, 74, 0.45);
-  padding: 28p* 80px 34px;
+  background: var(--navy-light);
+  border-top: 1px solid rgba(200, 155, 74, 0.5);
+  border-bottom: 1px solid rgba(200, 155, 74, 0.45);
+  padding: 28px 80px 34px;
 }
 
 .section-heading {
-* display: flex;
-  align-items: cen*er;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  g*p: 26px;
+  gap: 26px;
   margin-bottom: 24px;
 }
-*.section-heading span {
-  width: 1*0px;
+
+.section-heading span {
+  width: 120px;
   height: 1px;
-  background: *ar(--gold);
+  background: var(--gold);
 }
 
-.section-heading h2*{
+.section-heading h2 {
   margin: 0;
-  color: var(--gold*light);
-  text-transform: uppercas*;
+  color: var(--gold-light);
+  text-transform: uppercase;
   font-size: 26px;
-  letter-spac*ng: 4px;
+  letter-spacing: 4px;
   font-weight: 400;
 }
 
-.p*inciples-grid {
+.principles-grid {
   display: grid;
- *grid-template-columns: repeat(4, 1*r);
+  grid-template-columns: repeat(4, 1fr);
   gap: 34px;
 }
 
-.principles-gr*d article {
+.principles-grid article {
   display: grid;
-  gri*-template-columns: 58px 1fr;
+  grid-template-columns: 58px 1fr;
   gap: 18px;
   padding-right: 28px;
   border-right: 1px solid rgba(255, 255, 255, 0.22);
@@ -246,36 +317,36 @@ img {
 /* Lower section */
 
 .lower-section {
-  display: gri*;
-  grid-template-columns: 2fr 1fr*
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   background: var(--navy);
 }
 
-.in*estment-focus {
-  background: var(*-cream);
-  color: var(--text-dark)*
+.investment-focus {
+  background: var(--cream);
+  color: var(--text-dark);
   text-align: center;
-  padding: *8px 48px 42px;
+  padding: 28px 48px 42px;
 }
 
-.investment-focu* h2 {
+.investment-focus h2 {
   margin: 0;
-  text-transfor*: uppercase;
+  text-transform: uppercase;
   font-size: 28px;
-  *etter-spacing: 2px;
-  font-weight:*400;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .gold-rule {
-  width: 62px*
+  width: 62px;
   height: 1px;
-  background: var(*-gold);
+  background: var(--gold);
   margin: 14px auto 26px;
-*
+}
 
 .focus-grid {
   display: grid;
- *grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .focus-grid article {
@@ -311,28 +382,28 @@ img {
 /* Contact panel */
 
 .contact-panel {
-  background: *inear-gradient(90deg, #041b34, #03*72d);
-  border-top: 1px solid var(*-gold);
+  background: linear-gradient(90deg, #041b34, #03172d);
+  border-top: 1px solid var(--gold);
   padding: 30px 64px;
 }
 
-.*ontact-panel h2 {
-  margin: 0 0 14*x;
+.contact-panel h2 {
+  margin: 0 0 14px;
   color: var(--gold-light);
-  t*xt-transform: uppercase;
-  font-si*e: 22px;
+  text-transform: uppercase;
+  font-size: 22px;
   letter-spacing: 2px;
-  *ont-weight: 400;
+  font-weight: 400;
 }
 
-.contact-panel*p {
+.contact-panel p {
   margin: 0 0 22px;
-  color: r*ba(255, 255, 255, 0.88);
-  font-si*e: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
   line-height: 1.5;
 }
 
-.c*ntact-panel label {
+.contact-panel label {
   display: grid;
   grid-template-columns: 85px 1fr;
   align-items: center;
@@ -404,8 +475,8 @@ img {
     gap: 20px;
   }
 
-  .hero-logo {
-    width: 380px;
+  .hero-name {
+    font-size: 58px;
   }
 
   .focus-grid {
@@ -448,8 +519,22 @@ img {
     margin-top: 0;
   }
 
-  .hero-logo {
-    width: 300px;
+  .hero-symbol {
+    font-size: 64px;
+  }
+
+  .hero-name {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+
+  .hero-subtitle span {
+    width: 45px;
   }
 
   .hero h1 {
