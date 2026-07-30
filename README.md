@@ -1,37 +1,27 @@
-# Macantsaoir Capital Partners Website
+# Macantsaoir Capital Partners Premium Website
 
-Premium static website package for GitHub Pages.
+This is the corrected full premium package.
 
-## Files
+## Important
 
-- `index.html` - main webpage
-- `styles.css` - full responsive styling
-- `script.js` - mobile menu and scroll reveal effects
-- `assets/mcp-logo-capital-partners.svg` - recreated gold logo with Capital Partners wording
-- `assets/london-hero.svg` - dark London-style hero artwork
-- `assets/favicon.svg` - browser tab icon
-- `assets/MCP_Logo.png` - original uploaded logo reference, if included
+This version is intentionally self-contained. It only needs one file:
 
-## GitHub Upload Instructions
+- index.html
 
-1. Create a new repository on GitHub called `macantsaoir-capital-partners`.
-2. Upload all files and folders from this package.
-3. Go to **Settings > Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/root`.
-6. Save.
-7. Your site will publish at your GitHub Pages URL.
+All styling, logo artwork and background visual treatment are embedded inside the HTML file. This avoids the GitHub path issue that caused the oversized logo previously.
 
-## Contact Form
+## Upload to GitHub
 
-The contact form is visually complete but not connected yet. To make it send enquiries, replace the blank form action in `index.html`:
+1. Open your MCP repository on GitHub.
+2. Delete the old website files, or overwrite `index.html` with the new one.
+3. Upload this `index.html` to the root of the repository.
+4. Commit changes.
+5. Keep GitHub Pages set to:
+   - Branch: main
+   - Folder: / root
+6. Open your live site at:
+   https://mcp20263007.github.io/MCP/
 
-```html
-<form class="contact-form reveal" action="" method="POST">
-```
+## Contact form
 
-with a Formspree, Netlify Forms, or Power Automate HTTP endpoint.
-
-## Custom Domain
-
-After buying a domain such as `macantsaoircapital.com`, add it under **Settings > Pages > Custom domain** in GitHub.
+The contact form is visual only until connected to a form handling service such as Formspree, Netlify Forms or Power Automate.
