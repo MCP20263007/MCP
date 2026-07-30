@@ -1,27 +1,26 @@
-# Macantsaoir Capital Partners Premium Website
+# Macantsaoir Capital Partners - Premium Render Match
 
-This is the corrected full premium package.
+This package is built to match the uploaded visual render, including:
 
-## Important
+- London skyline hero visual from the supplied render
+- Gold Macantsaoir Capital Partners logo treatment
+- Top navigation
+- Hero headline and call-to-action buttons
+- Our Principles band
+- Investment Focus section
+- Confidential Enquiries contact panel
+- Footer
 
-This version is intentionally self-contained. It only needs one file:
+## Upload to GitHub Pages
 
-- index.html
-
-All styling, logo artwork and background visual treatment are embedded inside the HTML file. This avoids the GitHub path issue that caused the oversized logo previously.
-
-## Upload to GitHub
-
-1. Open your MCP repository on GitHub.
-2. Delete the old website files, or overwrite `index.html` with the new one.
-3. Upload this `index.html` to the root of the repository.
-4. Commit changes.
-5. Keep GitHub Pages set to:
+1. Unzip this package.
+2. In your GitHub repository, upload these items to the root:
+   - index.html
+   - styles.css
+   - assets folder
+3. Make sure GitHub Pages is set to:
    - Branch: main
    - Folder: / root
-6. Open your live site at:
-   https://mcp20263007.github.io/MCP/
+4. Open your live page.
 
-## Contact form
-
-The contact form is visual only until connected to a form handling service such as Formspree, Netlify Forms or Power Automate.
+Do not upload the outer folder itself. Upload the contents inside it.
