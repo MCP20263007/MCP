@@ -1,26 +1,23 @@
-# Macantsaoir Capital Partners - Premium Render Match
+# Macantsaoir Capital Partners landing page
 
-This package is built to match the uploaded visual render, including:
+This GitHub Pages package contains two versions:
 
-- London skyline hero visual from the supplied render
-- Gold Macantsaoir Capital Partners logo treatment
-- Top navigation
-- Hero headline and call-to-action buttons
-- Our Principles band
-- Investment Focus section
-- Confidential Enquiries contact panel
-- Footer
+1. `index.html` + `styles.css`  
+   Pixel-perfect visual match to the uploaded render by using the uploaded render as the master canvas.
 
-## Upload to GitHub Pages
+2. `index-componentised.html` + `componentised.css`  
+   Editable HTML/CSS recreation of the Macantsaoir Capital Partners landing page, including navigation, hero, principles, investment focus, enquiry form and footer.
 
-1. Unzip this package.
-2. In your GitHub repository, upload these items to the root:
-   - index.html
-   - styles.css
-   - assets folder
-3. Make sure GitHub Pages is set to:
-   - Branch: main
-   - Folder: / root
-4. Open your live page.
+## Deploy on GitHub Pages
 
-Do not upload the outer folder itself. Upload the contents inside it.
+Upload these files to the root of your GitHub repository and enable GitHub Pages from the repository settings.
+
+## Enquiry form
+
+In `index-componentised.html`, replace:
+
+```html
+https://formspree.io/f/your-form-id
+```
+
+with your real Formspree, Netlify Forms, or Power Automate endpoint.
