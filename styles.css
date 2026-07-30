@@ -1,40 +1,151 @@
-* {
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-    background: #04172d;
+body{
+font-family:Georgia,serif;
+background:#031a34;
+color:white;
 }
 
-body {
-    overflow-x: hidden;
+.navbar{
+position:absolute;
+top:30px;
+left:0;
+right:0;
+z-index:10;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 80px;
 }
 
-.render-page {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background: #04172d;
+.logo img{
+height:60px;
 }
 
-.master-render {
-    display: block;
-    width: 100%;
-    max-width: 1920px;
-    height: auto;
+nav{
+display:flex;
+gap:40px;
 }
 
-@media (min-aspect-ratio: 16/10) {
-    .master-render {
-        width: auto;
-        height: 100vh;
-        max-width: none;
-    }
+nav a{
+color:white;
+text-decoration:none;
+letter-spacing:1px;
+font-size:14px;
+text-transform:uppercase;
+}
+
+.hero{
+height:100vh;
+position:relative;
+background:
+linear-gradient(
+rgba(3,20,40,0.4),
+rgba(3,20,40,0.7)
+),
+url('london-hero.svg');
+
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-content{
+max-width:900px;
+padding:20px;
+}
+
+.hero-logo{
+width:140px;
+margin-bottom:30px;
+}
+
+h1{
+font-size:72px;
+letter-spacing:8px;
+color:#d5b16a;
+font-weight:normal;
+}
+
+.subtitle{
+letter-spacing:10px;
+color:#d5b16a;
+margin-bottom:40px;
+font-size:20px;
+}
+
+h2{
+font-size:52px;
+font-weight:normal;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.6;
+margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.primary{
+background:#c89b4a;
+color:#031a34;
+padding:16px 30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.secondary{
+border:1px solid #c89b4a;
+color:#c89b4a;
+padding:16px 30px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.navbar{
+padding:20px;
+flex-direction:column;
+gap:20px;
+}
+
+nav{
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+h1{
+font-size:42px;
+}
+
+h2{
+font-size:32px;
+}
+
+.subtitle{
+font-size:14px;
+letter-spacing:4px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.buttons{
+flex-direction:column;
+}
 }
