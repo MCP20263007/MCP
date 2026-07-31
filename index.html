@@ -1,634 +1,156 @@
-:root {
-  --navy: #03172d;
-  --navy-dark: #020f20;
-  --navy-light: #071f3d;
-  --gold: #c89b4a;
-  --gold-light: #d9b76a;
-  --cream: #f1eee7;
-  --white: #ffffff;
-  --black: #111111;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  background: var(--navy);
-  color: var(--white);
-  font-family: Georgia, "Times New Roman", serif;
-  overflow-x: hidden;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  color: inherit;
-}
-
-/* Header */
-
-.site-header {
-  positio*: absolute;
-  top: 34px;
-  left: 0*
-  right: 0;
-  z-index: 20;
-  disp*ay: flex;
-  align-items: flex-star*;
-  justify-content: space-between*
-  padding: 0 82px;
-}
-
-.brand {
-  *isplay: flex;
-  align-items: flex-*tart;
-  gap: 14px;
-  text-decorati*n: none;
-  color: var(--gold-light*;
-}
-
-.brand-icon {
-  width: 42px;
-* height: 54px;
-  position: relativ*;
-}
-
-.brand-roof {
-  width: 30px;
-* height: 18px;
-  border-top: 4px s*lid var(--gold);
-  border-left: 4p* solid var(--gold);
-  transform: r*tate(45deg);
-  margin: 2px auto 3p*;
-}
-
-.brand-column-box {
-  width: *4px;
-  height: 25px;
-  border: 3px*solid var(--gold);
-  display: flex*
-  justify-content: space-around;
-* padding: 2px 4px;
-  margin: 0 aut*;
-}
-
-.brand-column-box span {
-  wi*th: 3px;
-  background: var(--gold)*
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-main {
-  font-size: 26px;
-  line-height: 1;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
-
-.brand-sub {
-  margin-top: 7px;
-  font-size: 12px;
-  letter-spacing: 5px;
-  font-weight: 700;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.main-nav a {
-  color: rgba(255, 255, 255, 0.88);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1.1px;
-  font-weight: 700;
-}
-
-.main-nav a:hover {
-  color: var(--gold-light);
-}
-
-.nav-contact {
-  border: 1px solid var(--gold);
-  color: var(--gold-light) !important;
-  padding: 12px 24px;
-}
-
-/* Hero */
-
-.hero {
-  position: relative;
-  min-height: 720px;
-  height: 72vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  background:
-    radial-gradient(circle at 72% 38%, rgba(201, 139, 55, 0.34) 0%, rgba(201, 139, 55, 0.12) 22%, transparent 44%),
-    radial-gradient(circle at 26% 48%, rgba(20, 55, 92, 0.75) 0%, rgba(8, 31, 59, 0.55) 32%, transparent 58%),
-    linear-gradient(135deg, #020d1c 0%, #03172d 42%, #061f3e 100%);
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(2, 10, 22, 0.08), rgba(2, 10, 22, 0.78)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.025) 0px,
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px,
-      transparent 80px
-    );
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: min(950px, 92%);
-  margin-top: 68px;
-}
-
-.hero-symbol {
-  width: 88px;
-  height: 112px;
-  margin: 0 auto 22px;
-}
-
-.hero-roof {
-  width: 58px;
-  height: 34px;
-  border-top: 7px solid var(--gold-light);
-  border-left: 7px solid var(--gold-light);
-  transform: rotate(45deg);
-  margin: 0 auto 8px;
-}
-
-.hero-column-box {
-  width: 70px;
-  height: 58px;
-  border: 6px solid var(--gold-light);
-  display: flex;
-  justify-content: space-around;
-  padding: 6px 9px;
-  margin: 0 auto;
-}
-
-.hero-column-box span {
-  width: 6px;
-  background: var(--gold-light);
-}
-
-.hero-name {
-  color: var(--gold-light);
-  font-size: 76px;
-  line-height: 0.95;
-  letter-spacing: 7px;
-  font-weight: 700;
-  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.75);
-}
-
-.hero-subtitle {
-  margin-top: 14px;
-  color: var(--gold-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  font-size: 23px;
-  letter-spacing: 12px;
-  font-weight: 700;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.75);
-}
-
-.hero-subtitle span {
-  width: 92px;
-  height: 1px;
-  background: var(--gold);
-  display: inline-block;
-}
-
-.hero h1 {
-  margin: 34px 0 20px 0;
-  color: var(--white);
-  font-size: 50px;
-  line-height: 1.12;
-  font-weight: 400;
-  letter-spacing: 0.2px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
-}
-
-.hero p {
-  max-width: 720px;
-  margin: 0 auto 34px auto;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 18px;
-  line-height: 1.55;
-  font-weight: 700;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.button {
-  min-width: 210px;
-  padding: 16px 28px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.button-primary {
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  color: #1b1208;
-  border: 1px solid var(--gold);
-}
-
-.button-secondary {
-  color: var(--gold-light);
-  border: 1px solid var(--gold);
-  background: rgba(3, 23, 45, 0.42);
-}
-
-/* Principles */
-
-.principles-section {
-  background: var(--navy-light);
-  border-top: 1px solid rgba(200, 155, 74, 0.5);
-  border-bottom: 1px solid rgba(200, 155, 74, 0.45);
-  padding: 30px 80px 36px;
-}
-
-.section-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 26px;
-  margin-bottom: 26px;
-}
-
-.section-heading span {
-  width: 120px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.section-heading h2 {
-  margin: 0;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  font-size: 26px;
-  letter-spacing: 4px;
-  font-weight: 400;
-}
-
-.principles-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 34px;
-}
-
-.principles-grid article {
-  display: grid;
-  grid-template-columns: 58px 1fr;
-  gap: 18px;
-  padding-right: 28px;
-  border-right: 1px solid rgba(255, 255, 255, 0.22);
-}
-
-.principles-grid article:last-child {
-  border-right: none;
-}
-
-.principle-icon {
-  color: var(--gold-light);
-  font-size: 34px;
-  line-height: 1;
-}
-
-.principles-grid h3 {
-  margin: 0 0 8px;
-  color: var(--white);
-  text-transform: uppercase;
-  font-size: 16px;
-  letter-spacing: 1.1px;
-}
-
-.principles-grid p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 15px;
-  line-height: 1.45;
-}
-
-/* Lower section */
-
-.lower-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  background: var(--navy);
-}
-
-.investment-focus {
-  background: var(--cream);
-  color: var(--black);
-  text-align: center;
-  padding: 34px 48px 44px;
-}
-
-.investment-focus h2 {
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 30px;
-  letter-spacing: 3px;
-  font-weight: 400;
-}
-
-.gold-rule {
-  width: 62px;
-  height: 1px;
-  background: var(--gold);
-  margin: 16px auto 28px;
-}
-
-.focus-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.focus-grid article {
-  padding: 0 20px;
-  border-right: 1px solid rgba(0, 0, 0, 0.22);
-}
-
-.focus-grid article:last-child {
-  border-right: none;
-}
-
-.focus-icon {
-  margin: 0 auto 14px;
-  color: var(--gold);
-  font-size: 34px;
-}
-
-.focus-grid h3 {
-  margin: 0 0 10px;
-  text-transform: uppercase;
-  font-size: 15px;
-  line-height: 1.25;
-  letter-spacing: 0.7px;
-}
-
-.focus-grid p {
-  margin: 0;
-  text-align: left;
-  font-size: 13px;
-  line-height: 1.45;
-}
-
-/* Contact panel */
-
-.contact-panel {
-  background: linear-gradient(90deg, #041b34, #03172d);
-  border-top: 1px solid var(--gold);
-  padding: 34px 64px;
-}
-
-.contact-panel h2 {
-  margin: 0 0 14px;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  font-size: 22px;
-  letter-spacing: 2px;
-  font-weight: 400;
-}
-
-.contact-panel p {
-  margin: 0 0 22px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.contact-panel label {
-  display: grid;
-  grid-template-columns: 85px 1fr;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-  color: var(--white);
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.contact-panel input,
-.contact-panel textarea {
-  width: 100%;
-  border: 1px solid rgba(200, 155, 74, 0.75);
-  background: #061d38;
-  color: var(--white);
-  padding: 10px 12px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  outline: none;
-}
-
-.contact-panel textarea {
-  height: 70px;
-  resize: vertical;
-}
-
-.contact-panel button {
-  display: block;
-  width: 230px;
-  margin: 16px auto 0;
-  border: 1px solid var(--gold);
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  color: #1b1208;
-  padding: 14px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-/* Footer */
-
-.site-footer {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1.4fr;
-  align-items: center;
-  gap: 20px;
-  min-height: 72px;
-  padding: 20px 70px;
-  background: var(--navy-dark);
-  color: var(--gold-light);
-  border-top: 1px solid rgba(200, 155, 74, 0.3);
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.8px;
-}
-
-/* Responsive */
-
-@media (max-width: 1100px) {
-  .site-header {
-    padding: 0 34px;
-  }
-
-  .main-nav {
-    gap: 20px;
-  }
-
-  .hero-name {
-    font-size: 58px;
-  }
-
-  .focus-grid {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
-  }
-
-  .focus-grid article:nth-child(3) {
-    border-right: none;
-  }
-
-  .lower-section {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 780px) {
-  .site-header {
-    position: relative;
-    padding: 22px;
-    background: var(--navy-dark);
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .main-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .hero {
-    min-height: 680px;
-    height: auto;
-    padding: 80px 0;
-  }
-
-  .hero-content {
-    margin-top: 0;
-  }
-
-  .hero-symbol {
-    transform: scale(0.72);
-    margin-bottom: 4px;
-  }
-
-  .hero-name {
-    font-size: 40px;
-    letter-spacing: 4px;
-  }
-
-  .hero-subtitle {
-    font-size: 14px;
-    letter-spacing: 5px;
-  }
-
-  .hero-subtitle span {
-    width: 45px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .principles-section {
-    padding: 30px 26px;
-  }
-
-  .section-heading span {
-    width: 60px;
-  }
-
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .principles-grid article {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    padding-bottom: 20px;
-  }
-
-  .focus-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .focus-grid article {
-    border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-  }
-
-  .contact-panel {
-    padding: 34px 26px;
-  }
-
-  .contact-panel label {
-    grid-template-columns: 1fr;
-  }
-
-  .site-footer {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 28px 20px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MacAntsaoir Capital Partners</title>
+  <meta name="description" content="MacAntsaoir Capital Partners is a private investment and advisory firm focused on disciplined capital, strategic partnerships and long-term value creation." />
+  styles.css
+</head>
+
+<body>
+
+  <header class="site-header">
+    #
+      <span class="brand-main">MACANTSAOIR</span>
+      <span class="brand-sub">CAPITAL PARTNERS</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      #principlesPrinciples</a>
+      #investment-focusFocus</a>
+      #contactContact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-name">MACANTSAOIR</div>
+        <div class="hero-subtitle">CAPITAL PARTNERS</div>
+
+        <h1>Disciplined Capital. Strategic Partnerships. Long-Term Value.</h1>
+
+        <p>
+          A private investment and advisory platform focused on selective opportunities,
+          trusted relationships and considered capital deployment.
+        </p>
+
+        <div class="hero-buttons">
+          #investment-focusInvestment Focus</a>
+          #contactContact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="principles" class="principles-section">
+      <div class="section-heading">
+        <h2>Our Principles</h2>
+      </div>
+
+      <div class="principles-grid">
+        <article>
+          <h3>Discretion</h3>
+          <p>
+            We operate with confidentiality, professionalism and respect for the sensitivities
+            of private capital, family interests and strategic transactions.
+          </p>
+        </article>
+
+        <article>
+          <h3>Alignment</h3>
+          <p>
+            We seek opportunities where interests are clearly aligned and where long-term
+            value creation is prioritised over short-term activity.
+          </p>
+        </article>
+
+        <article>
+          <h3>Discipline</h3>
+          <p>
+            We apply careful judgement, commercial realism and structured thinking to every
+            relationship, opportunity and transaction.
+          </p>
+        </article>
+
+        <article>
+          <h3>Partnership</h3>
+          <p>
+            We work with founders, investors, families and advisers who value trust,
+            clarity and durable business relationships.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="lower-section">
+
+      <section id="investment-focus" class="investment-focus">
+        <h2>Investment Focus</h2>
+
+        <p>
+          MacAntsaoir Capital Partners focuses on private opportunities where experience,
+          relationships and patient capital can support meaningful outcomes.
+        </p>
+
+        <div class="focus-grid">
+          <div>
+            <h3>Private Capital</h3>
+            <p>
+              Selective capital opportunities involving private companies, strategic assets
+              and founder-led businesses.
+            </p>
+          </div>
+
+          <div>
+            <h3>Advisory</h3>
+            <p>
+              Strategic guidance for owners, investors and families considering growth,
+              transition, acquisition or exit planning.
+            </p>
+          </div>
+
+          <div>
+            <h3>Partnerships</h3>
+            <p>
+              Long-term commercial relationships built around trust, discretion and aligned
+              objectives.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <aside id="contact" class="contact-panel">
+        <h2>Contact</h2>
+
+        <p>
+          For confidential enquiries, please use the form below.
+        </p>
+
+        <form>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Your email address" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message"></textarea>
+
+          <button type="submit">Send Enquiry</button>
+        </form>
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 MacAntsaoir Capital Partners. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
